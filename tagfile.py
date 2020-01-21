@@ -49,7 +49,8 @@ def atualizarArquivos(diretorio,nome_arquivo, artista, musica):
     tags = mp3.get_tags()
     print(' Tags Antes:\n {}'.format(tags))
     # Seta o novo artista
-    mp3.artist = 'Trevis'
+    mp3.artist = artista
+    mp3.song = musica
     mp3.save()
     tags = mp3.get_tags()
     print(' Tags Depois:\n {}'.format(tags) )
